@@ -18,6 +18,9 @@ public class LevelExit : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("WinScreen");
+        if (GetComponents<Pumpkin>().Length == 0)
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
     }
 }
